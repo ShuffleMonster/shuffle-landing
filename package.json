@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sh bundle.sh"
+    "build": "./node_modules/.bin/webpack"
   },
   "repository": {
     "type": "git",
@@ -26,6 +25,19 @@
   },
   "homepage": "https://github.com/ShuffleMonster/shuffle-landing#readme",
   "dependencies": {
-    "minify": "^5.1.0"
+    "jquery": "^2.2.4"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.1.1",
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
   }
 }
