@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/ShuffleMonster/shuffle-landing#readme",
   "dependencies": {
-    "jquery": "^2.2.4"
+    "jquery": "^3.4.0"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^5.1.1",
