@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sh bundle.sh"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/ShuffleMonster/shuffle-landing/issues"
   },
-  "homepage": "https://github.com/ShuffleMonster/shuffle-landing#readme"
+  "homepage": "https://github.com/ShuffleMonster/shuffle-landing#readme",
+  "dependencies": {
+    "minify": "^5.1.0"
+  }
 }
