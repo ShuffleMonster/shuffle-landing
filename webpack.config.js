@@ -1,15 +1,23 @@
 
 const path = require('path')
 const CopyPlugin = require('copy-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin');
+const webpack = require('webpack')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: {
+    main: './src/main.js'
+  },
   output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
+  },
+  node: {
+    net: 'empty',
   },
   plugins: [
+    new webpack.EnvironmentPlugin(['ETH_NODE']),
     new CopyPlugin([
       {
         from: 'src',
@@ -22,6 +30,8 @@ module.exports = {
     ])
   ],
   optimization: {
-    minimizer: [new UglifyJsPlugin()]
+    usedExports: true,
+    minimize: true,
+    minimizer: [new TerserPlugin()],
   }
 }

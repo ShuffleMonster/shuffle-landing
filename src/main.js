@@ -1,4 +1,15 @@
-var $ = require('jquery')
+var { getLastRewards } = require('./js/shuf.js')
+
+var TEMPLATE_WINNER = `
+<a href="{{link}}" class="box" id="template-reward" target="_blank">
+<p>Address: <span class="eth-address">{{address}}</span></p>
+<div class="round">
+  <p>Wins</p>
+  <span class="shuf-win">{{amount}}</span>
+  <div class="b">SHUF</div>
+</div>
+</a>
+`
 
 $(document).ready(function () {
   // ANIMATED LOGO
@@ -44,4 +55,28 @@ $(document).ready(function () {
   if ($(window).width() < 580) {
     $('.faq h2').html('FAQ')
   }
-})
+  // LOAD LAST REWARDS
+  getLastRewards((rewards) => {
+    let half = Math.floor(rewards.length / 2)    
+    let first = rewards.slice(0, half);
+    let second = rewards.slice(half, rewards.length);
+    first.forEach((reward) => {
+      var child = TEMPLATE_WINNER
+        .replace('{{link}}', `https://etherscan.io/tx/${reward.tx}`)
+        .replace('{{address}}', `0x${reward.winner.slice(0, 3)}...${reward.winner.slice(-5)}`)
+        .replace('{{amount}}', reward.amount / 10 ** 18)
+        .replace('#template-reward', '')
+
+      $('#template-container-l').append(child)
+    });
+    second.forEach((reward) => {
+      var child = TEMPLATE_WINNER
+        .replace('{{link}}', `https://etherscan.io/tx/${reward.tx}`)
+        .replace('{{address}}', `0x${reward.winner.slice(0, 3)}...${reward.winner.slice(-5)}`)
+        .replace('{{amount}}', reward.amount / 10 ** 18)
+        .replace('#template-reward', '')
+
+      $('#template-container-r').append(child)
+    });
+  });
+});

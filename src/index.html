@@ -16,7 +16,8 @@
 		<meta name="theme-color" content="#ffffff">
 		<title>The Shuffle Token</title>
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<script src="main.js" type="text/javascript"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="main.js" defer type="text/javascript"></script>
 	</head>
 	<body>
 		<header class="header">
@@ -66,16 +67,10 @@
 			<div class="wrapper">
 				<div>
 					<h3 class="black">Last assignations</h3>
-					<div class="address address-l">
-						<a href=""class="box">
-							<p>Address: <span class="eth-address">0x19c...4246C</span></p>
-							<div class="round">
-								<p>Wins</p>
-								<span class="shuf-win">10</span>
-								<div class="b">SHUF</div>
-							</div>
-						</a>
-						<a href=""class="box">
+					<div class="address address-l" id="template-container-l">
+					</div>
+					<div class="address address-r" id="template-container-r">
+						<!-- <a href=""class="box">
 							<p>Address: <span class="eth-address">0x19c...4246C</span></p>
 							<div class="round">
 								<p>Wins</p>
@@ -92,7 +87,7 @@
 							</div>
 						</a>
 					</div>
-					<div class="address address-r">
+					
 						<a href=""class="box">
 							<p>Address: <span class="eth-address">0x19c...4246C</span></p>
 							<div class="round">
@@ -116,7 +111,7 @@
 								<span class="shuf-win">10</span>
 								<div class="b">SHUF</div>
 							</div>
-						</a>
+						</a> -->
 					</div>	
 				</div>
 			</div>
