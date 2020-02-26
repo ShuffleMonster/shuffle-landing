@@ -25,11 +25,6 @@
     "url": "https://github.com/ShuffleMonster/shuffle-landing/issues"
   },
   "homepage": "https://github.com/ShuffleMonster/shuffle-landing#readme",
-  "dependencies": {
-    "ethrpc": "^6.2.4",
-    "mustache": "^4.0.0",
-    "web3": "^1.2.6"
-  },
   "devDependencies": {
     "copy-webpack-plugin": "^5.1.1",
     "eslint": "^6.8.0",
