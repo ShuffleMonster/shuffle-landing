@@ -1,4 +1,3 @@
-var $ = require('jquery')
 
 $(document).ready(function () {
   // ANIMATED LOGO
