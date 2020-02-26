@@ -11,6 +11,16 @@ var TEMPLATE_WINNER = `
 </a>
 `
 
+function formatAmount(amount, maxDigits = 6)  {
+  if (amount.toString().length <= maxDigits) {
+      return amount.toString();
+  }
+  var intDigits = amount.toFixed(0).toString().length;
+  var decDigits = maxDigits - intDigits;
+  var decimals = (decDigits > 0) ? decDigits : 0;
+  return Number(amount.toFixed(decimals)).toString();
+}
+
 $(document).ready(function () {
   // ANIMATED LOGO
   $(function () {
@@ -64,7 +74,7 @@ $(document).ready(function () {
       var child = TEMPLATE_WINNER
         .replace('{{link}}', `https://etherscan.io/tx/${reward.tx}`)
         .replace('{{address}}', `0x${reward.winner.slice(0, 3)}...${reward.winner.slice(-5)}`)
-        .replace('{{amount}}', reward.amount / 10 ** 18)
+        .replace('{{amount}}', formatAmount(reward.amount / 10 ** 18))
         .replace('#template-reward', '')
 
       $('#template-container-l').append(child)
@@ -73,7 +83,7 @@ $(document).ready(function () {
       var child = TEMPLATE_WINNER
         .replace('{{link}}', `https://etherscan.io/tx/${reward.tx}`)
         .replace('{{address}}', `0x${reward.winner.slice(0, 3)}...${reward.winner.slice(-5)}`)
-        .replace('{{amount}}', reward.amount / 10 ** 18)
+        .replace('{{amount}}', formatAmount(reward.amount / 10 ** 18))
         .replace('#template-reward', '')
 
       $('#template-container-r').append(child)
