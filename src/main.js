@@ -11,7 +11,7 @@ var TEMPLATE_WINNER = `
 </a>
 `
 
-function formatAmount(amount, maxDigits = 6)  {
+function formatAmount(amount, maxDigits = 6) {
   if (amount.toString().length <= maxDigits) {
       return amount.toString();
   }
@@ -21,7 +21,49 @@ function formatAmount(amount, maxDigits = 6)  {
   return Number(amount.toFixed(decimals)).toString();
 }
 
+function nextFullMoon() {
+  function phase(date) {
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
+    var year = date.getYear() + 1900;
+
+    let c = e = jd = b = 0;
+
+    if (month < 3) {
+      year--;
+      month += 12;
+    }
+  
+    ++month;
+    c = 365.25 * year;
+    e = 30.6 * month;
+    jd = c + e + day - 694039.09; // jd is total days elapsed
+    jd /= 29.5305882; // divide by the moon cycle
+    b = parseInt(jd); // int(jd) -> b, take integer part of jd
+    jd -= b; // subtract integer part to leave fractional part of original jd
+    return Math.round(jd * 8); // scale fraction from 0-8 and round
+  }
+
+  var date = new Date();
+  var changed = false;
+  var eval = phase(date);
+  for(var i = 0; i < 320; i++) {
+    date.setDate(date.getDate() + 1);
+    var neval = phase(date);
+    if (neval != eval) {
+      eval = neval;
+      changed = true;
+    }
+
+    if (eval === 4 && changed) {
+      return date;
+    }
+  }
+}
+
 $(document).ready(function () {
+  // UPDATE NEXT FULL MOON
+  $('#next-moon')[0].textContent = nextFullMoon().toLocaleDateString();
   // ANIMATED LOGO
   $(function () {
     $('#logo').hover(
