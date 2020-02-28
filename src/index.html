@@ -93,82 +93,142 @@
 				<div>
 					<h2 class="black">Frequently asked <br> questions</h2>
 					<div class="faq-btn">
-					  <p>Who were eligible for the airdrop?</p>
-					  <div id="off-screen">
-					    <h4>Any user who already had ETH at block 8113050 was eligible for 150 SHUF tokens for every ETH held at that time.</h4>
-					  </div>
+						<p>What's the Shuffle Token?</p>
+						<div id="off-screen">
+						  <h4>The Shuffle Token is an ERC-20 token that "shuffles" itself on each transfer, 1% of the transferred amount it's received by a random holder, picked from the top 512 holders.</h4>
+						</div>
 					</div>
 					<div class="faq-btn">
-					  <p>Was there any cost?</p>
-					  <div id="off-screen">
-					    <h4>The only cost of claiming SHUF tokens was the gas of the claim transaction. The tokens were distributed for free.</h4>
-					  </div>
+						<p>What's the burning?</p>
+						<div id="off-screen">
+						  <h4>An aditional 1% of tokens are taken on each transaction; those are destroyed, reducing the total supply on each token transfer.</h4>
+						</div>
 					</div>
 					<div class="faq-btn">
-					  <p>Was there any minimum amount?</p>
-					  <div id="off-screen">
-					    <h4>No, you could claim for even one single wei.</h4>
-					  </div>
+						<p>Is SHUF an investment?</p>
+						<div id="off-screen">
+						  <h4>NO, SHUF IS A GAME, sorry for yelling, but this is important. Shuf is a meme-coin and a game, it has value almost like any other token, but it shouldn't be considered a way of investing money, it's an experiment.</h4>
+						</div>
 					</div>
 					<div class="faq-btn">
-					  <p>Was there a maximum amount?</p>
-					  <div id="off-screen">
-					    <h4>The maximum amount of tokens that a single address could claim was 1500 SHUF, equivalent to holding 10 ETH at block 8113050.</h4>
-					  </div>
+						<p>What's the transaction fee?</p>
+						<div id="off-screen">
+						  <h4>The total transaction fee of a SHUF transfer operation is 2%, half of it is destroyed, and the other half is sent to a random holder. Transactions additionally have to pay for gas, just like any other Ethereum transaction.</h4>
+						</div>
 					</div>
 					<div class="faq-btn">
-					  <p>How many SHUF tokens are there?</p>
-					  <div id="off-screen">
-					    <h4>The total amount of SHUF was one million and has already decreased.</h4>
-					  </div>
+						<p>What's the Heap?</p>
+						<div id="off-screen">
+						  <h4>The Heap is the data structure used to track the 512 top holders of the token; you may enter or leave the Heap depending on how much balance you have.</h4>
+						</div>
 					</div>
 					<div class="faq-btn">
-					  <p>What happened if too many tried to claim SHUF?</p>
-					  <div id="off-screen">
-					    <h4>After all the 1,000,000 tokens were distributed, the airdrop stopped.</h4>
-					  </div>
+						<p>Why the top 512 holders?</p>
+						<div id="off-screen">
+						  <h4>We believe it to be more interesting this way; picking an address between all the token holders would generate incentives to maintain hundred of wallets with the minimal amount of SHUF possible.
+							<br/><br/>
+							Instead, the 512 limit generates more complex incentives, including incentives for making more transfers.</h4>
+						</div>
 					</div>
 					<div class="faq-btn">
-					  <p>What is the Heap?</p>
-					  <div id="off-screen">
-					    <h4>The Heap is the data structure used to track the 512 top holders of the token; you may enter or leave the Heap depending on how much balance you have in relation to others.</h4>
-					  </div>
+						<p>How is the random winner selected?</p>
+						<div id="off-screen">
+						  <h4>The address of the sender is used as the seed of a random number generator, and from that unique generator, the index of the winner is obtained.
+							<br/><br/>
+							A series of mechanisms are in place to limit the ability of the sender to manipulate who is going to become the winner, making the token shuffling as fair as possible.</h4>
+						</div>
 					</div>
 					<div class="faq-btn">
-					  <p>What happens if I am in the Heap?</p>
-					  <div id="off-screen">
-					    <h4>On every transaction made you may win 1% of the amount transferred.</h4>
-					  </div>
+						<p>How was the token distributed?</p>
+						<div id="off-screen">
+						  <h4>Any user who had ETH at block 8113050 was eligible for 150 SHUF tokens for every ETH held at that time, with a maximum assigned amount of 1500 SHUF tokens.
+							<br/><br/>
+							Users were able to manually claim their share of SHUF until the limit of 1 million SHUF was reached.</h4>
+						</div>
 					</div>
 					<div class="faq-btn">
-					  <p>What is the SHUF transaction fee?</p>
-					  <div id="off-screen">
-					    <h4>Almost all transfers of SHUF tokens have a surcharge of 2%, half of the amount is burned, and the other half is sent to a winner drawn from the Heap.</h4>
-					  </div>
+						<p>Was there an airdrop?</p>
+						<div id="off-screen">
+						  <h4>Sort of, we initially claimed the tokens for some random addresses at the beginning of the project: this was our mechanism of choice to kickstart the project.
+							<br/><br/>
+							Some small community-driven airdrops are still ongoing.</h4>
+						</div>
 					</div>
 					<div class="faq-btn">
-					  <p>What is the burning of tokens?</p>
-					  <div id="off-screen">
-					    <h4>When tokens are burned, they are no longer part of the total emission of SHUF token, this adds to its scarcity and should increase the value of the remaining tokens.</h4>
-					  </div>
+						<p>How many SHUF tokens are there?</p>
+						<div id="off-screen">
+						  <h4>The total amount of SHUF was one million and has already decreased.</h4>
+						</div>
 					</div>
 					<div class="faq-btn">
-					  <p>How is the random winner selected?</p>
-					  <div id="off-screen">
-					    <h4>The address of the sender is used as the seed of a random number generator, and from that unique generator, the index of the winner is obtained. <br> In this manner, we limit the ability of a sender to manipulate who is going to become the winner when they make a transfer.</h4>
-					  </div>
+						<p>Why my transaction fails with "Out of gas"?</p>
+						<div id="off-screen">
+						  <h4>Because SHUF is not your regular ERC20 token, it requires aditional gas-limit to distribute the reward and update the Heap, try increasing the gas-limit to 650000.</h4>
+						</div>
 					</div>
 					<div class="faq-btn">
-					  <p>What goes to the developer?</p>
-					  <div id="off-screen">
-					    <h4>6% of the token emission, and we are subject to the same fees as every other user, also we don't have any means to emit or manipulate the circulating tokens.</h4>
-					  </div>
+						<p>What about increasing the gas price?</p>
+						<div id="off-screen">
+						  <h4>Increasing or decreasing the gas-price has no relation with the "Out of gas" errors, this is true for shuffle and almost all other Ethereum projects. It would help if you increased the gas-limit.</h4>
+						</div>
 					</div>
 					<div class="faq-btn">
-					  <p>Is the project open source?</p>
-					  <div id="off-screen">
-					    <h4>Yes, you can find all the code in our Github repository.</h4>
-					  </div>
+						<p>Why it uses that much gas?</p>
+						<div id="off-screen">
+						  <h4>The token needs the gas to re-calculate the top 512 holders and to pay for the rewards.
+							<br/><br/>
+							There is also an aditional gas cost when SHUF is transferred to an address for the first time because a contract for storing each balance has to be deployed.</h4>
+						</div>
+					</div>
+					<div class="faq-btn">
+						<p>When &lt;Random popular exchange&gt;?</p>
+						<div id="off-screen">
+						  <h4>We don't want to artificially inflate the price of the token by listing it on popular exchanges, the token is mostly traded in Uniswap in a 100% decentralized manner, and we don't intend to pay for any other exchange.</h4>
+						</div>
+					</div>
+					<div class="faq-btn">
+						<p>Is SHUF an ERC20 token?</p>
+						<div id="off-screen">
+						  <h4>Yes and no, it is compliant with the ERC20 interface and will work with most of the wallets, but the behavior of SHUF differs from the other tokens; because the receiver doesn't receive the full amount transferred by the sender.</h4>
+						</div>
+					</div>
+					<div class="faq-btn">
+						<p>So... can I use SHUF as an ERC20 token?</p>
+						<div id="off-screen">
+						  <h4>Yes! Mostly... some custom contracts may break trying to handle SHUF, but we made sure to support the most used ones (Uniswap, Forkdelta, etc.). If you want to know if your contract is SHUF compatible, ask in our group!</h4>
+						</div>
+					</div>
+					<div class="faq-btn">
+						<p>I want to use a contract with SHUF, but reverts, can you help me?</p>
+						<div id="off-screen">
+						  <h4>Yes! (Depending on the contract), but we can disable the shuffling and burning on some contracts to make them work, as long as it makes sense and doesn't break the game.</h4>
+						</div>
+					</div>
+					<div class="faq-btn">
+						<p>Disable the shuffling?</p>
+						<div id="off-screen">
+						  <h4>We can add contracts to a whitelist, and if a contract is in this whitelist, no shuffling occurs when tokens are sent to or from this contract.
+							<br/><br/>
+							We added this feature to support the most popular dapps; for example, Uniswap is whitelisted on token sells, because otherwise, Uniswap breaks because of the burning and shuffling.</h4>
+						</div>
+					</div>
+					<div class="faq-btn">
+						<p>What goes to the developer?</p>
+						<div id="off-screen">
+						  <h4>6% of the token emission, and we are subject to the same fees as every other user; also, we don't have any means to emit or manipulate the circulating tokens.</h4>
+						</div>
+					</div>
+					<div class="faq-btn">
+						<p>Is the project open source?</p>
+						<div id="off-screen">
+						  <h4>Of course! We even have copycats; you can find all the code in our Github repository.</h4>
+						</div>
+					</div>
+					<div class="faq-btn">
+						<p>When moon?</p>
+						<div id="off-screen">
+						  <h4>The next full moon is going to be on <span id="next-moon"></span>, but that has absolutely nothing to do with this token. 🌝</h4>
+						</div>
 					</div>
 				</div>
 			<div class="wrapper">
