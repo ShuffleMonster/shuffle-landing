@@ -68,13 +68,27 @@ $(document).ready(function () {
   $(function () {
     $('#logo').hover(
       function () {
-        $('.hat').attr('src', 'assets/img/giflogo.gif')
+        Array.from(
+          document.querySelector("#hat-obj").contentDocument.querySelectorAll('animate,animateTransform')
+        ).forEach((a) => a.beginElement())
       },
-      function () {
-        $(this).attr('src', 'assets/img/hat.svg')
-      }
+      function () {}
     )
   })
+  // 2% ANIMATED
+  var percentLocation = $("#percent-obj")[0].getBoundingClientRect();
+  var percentAnimated = false;
+  document.addEventListener("scroll", () => {
+    if (percentAnimated) return;
+
+    let viewBottom = window.scrollY + window.innerHeight;
+    if (viewBottom > percentLocation.y) {
+      percentAnimated = true;
+      Array.from(
+        document.querySelector("#percent-obj").contentDocument.querySelectorAll('animate,animateTransform')
+      ).forEach((a) => a.beginElement())
+    }
+  });
   // MOUSE-FOLLOR MONSTER EYE
   $('body').mousemove(function (event) {
     var eye = $('.eye')

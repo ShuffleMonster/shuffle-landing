@@ -23,7 +23,9 @@
 		<header class="header">
 			<div class="wrapper">
 				<div id="logo">
-					<img class="hat" width="55" height="28" src="assets/img/giflogo.gif">
+					<object id="hat-obj" type="image/svg+xml" class="hat" width="55" height="28" data="assets/img/hat_animated.svg">
+						<img class="hat" width="55" height="28" src="assets/img/hat_static.png">
+					</object>
 					<img src="assets/img/shuffle-text.svg">
 				</div>
 				<a href="#join" class="button">Join the heap</a>
@@ -47,7 +49,9 @@
 		<section id="how" class="how">
 			<div class="wrapper">
 				<div class="illustration">
-					<div><img src="assets/img/percent_gif.gif"></div>	
+					<object id="percent-obj" type="image/svg+xml"  data="assets/img/percent_anim.svg">
+						<img height="309" width="255" src="assets/img/percent_static.png">
+					</object>
 				</div>
 				<div class="description">
 					<div>
@@ -76,7 +80,8 @@
 			<div class="wrapper">
 				<div>
 					<h1 class="black">Join the heap</h1>
-					<h3>The last address has <span class="heap512">14</span> SHUF</h3>
+					<!-- TODO: Add last address to join the heap -->
+					<!-- <h3>The last address has <span class="heap512">14</span> SHUF</h3> -->
 					<a href="https://uniswap.exchange/swap/0x3a9fff453d50d4ac52a6890647b823379ba36b9e" target="_blank" class="button uniswap">Trade on 🦄 Uniswap</a>
 					<a href="https://legacy.ddex.io/trade/SHUF-WETH" target="_blank" class="button ddex">Trade on <img class="ddex-logo" width="24" height="22" src="assets/img/ddex-logo.png"/> DDEX</a>
 					<a href="https://t.me/shuftoken" target="_blank" class="button telegram">Join our <img class="tg-logo" width="24" height="22" src="assets/img/tg-logo.png"/> Telegram</a>
